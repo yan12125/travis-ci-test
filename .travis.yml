@@ -1,0 +1,2 @@
+sudo: false
+script: python ./print_cpu_count.py
