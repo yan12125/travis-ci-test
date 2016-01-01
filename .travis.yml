@@ -1,6 +1,8 @@
 language: python
 python:
+    - "2.7"
     - "3.5"
 
 sudo: false
-script: python ./run.py
+before_script: python ./run.py
+script: nosetests --verbose test
