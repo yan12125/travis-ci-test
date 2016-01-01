@@ -37,7 +37,9 @@ def write_string(s, out=sys.stdout, encoding=None):
 
 class TestFoo(unittest.TestCase):
     def test_failed(self):
+        write_string('a' * 1000)
         write_string('中文')
+        sys.stdout.write('中文')
 
         raise Exception('中文')
 

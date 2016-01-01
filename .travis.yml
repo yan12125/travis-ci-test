@@ -4,5 +4,5 @@ python:
     - "3.5"
 
 sudo: false
-before_script: python ./run.py
+before_script: env && python ./run.py
 script: nosetests --verbose test
