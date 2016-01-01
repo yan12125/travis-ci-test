@@ -3,4 +3,4 @@ python:
     - "3.5"
 
 sudo: false
-script: python ./print_cpu_count.py
+script: python ./run.py
