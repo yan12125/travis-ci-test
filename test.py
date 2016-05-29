@@ -43,5 +43,11 @@ class TestFoo(unittest.TestCase):
 
         raise Exception('中文')
 
+    def test_mbcs(self):
+        s = '中文'
+        print(repr(s))
+        print(repr(s.encode('utf-8')))
+        print(repr(s.encode(sys.getfilesystemencoding())))
+
 if __name__ == '__main__':
     unittest.main()
