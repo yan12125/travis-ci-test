@@ -11,4 +11,9 @@ build_script:
   - "%PYTHON% run.py"
 
 test_script:
+  - chcp
+  - chcp 65001
   - "%PYTHON% -m nose --verbose test"
+
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
